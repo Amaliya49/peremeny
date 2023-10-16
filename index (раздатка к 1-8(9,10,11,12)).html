@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Курс JavaScript</title>
+	<script>
+	// //Задание 1-8
+	// 	let surname = 'Курочкина';
+	// 	let name = 'Анастасия';
+	// 	let patronymic = 'Викторовна';
+	// 	let ocupation = 'Преподаватель специальных дисциплин.';
+	// 	let degree = 'Высшее.';
+	// 	let category = 'Первая.';
+	// 	let education = 'Московский государственный институт электронной техники.';
+	// 	let discipline = 'Элементы высшей математики.';
+	// 	let note = 'Люблю яблоки!';
+
+	// //Задание 1-9
+		// let teacher1 = ['<b>Курочкина</b>', '<b>Анастасия</b>', '<b>Викторовна</b>', 'Преподаватель специальных дисциплин.', 'Высшее.', 'Первая.', 
+		// 'Московский государственный институт электронной техники', 'Элементы высшей математики','Люблю яблоки!'];
+
+//Задание 1-10
+		let teacher = {
+			surname: 'Курочкина',
+			name: 'Анастасия',
+			patronymic: 'Викторовна',
+			ocupation:'Преподаватель специальных дисциплин',
+			degree: 'Высшее',
+			category: 'Первая',
+			education: ['Московский государственный институт электронной техники,', 'Санкт-Петербургский государственный университет (СПбГУ).'],
+			discipline: ['Элементы высшей математики;', 'Математика;', 'Информатика.'],
+			note: 'Люблю яблоки!'
+		};
+		
+	</script>
+</head>
+
+<body>
+	
+	<header>
+		<h1 align = "center">Введение в JavaScript</h1>
+	</header>	
+	
+	<div class="content">
+		<script>
+	// //Задание 1-8
+	// 		document.write (
+	// 			'<p>', '<h2>', surname + ' ' +  name + ' ' + patronymic, '</h2>', '</p>' +
+	// 			'<i>Должность:</i>' + ' ' + ocupation + '<p></p>' +
+	// 			'<i>Уровень образования:</i>' + ' ' + degree + '<p></p>' +
+	// 			'<i>Категория:</i>' + ' ' + category + '<p></p>' +
+	// 			'<i>Образование:</i>' + ' ' + education + '<p></p>' +
+	// 			'<i>Дисциплина:</i>' + ' ' + discipline + '<p></p>' +
+	// 			'<i>Примечание:</i>' + ' ' + note + '<p></p>' 
+	// 		);
+
+	// //Задание 1-9
+			// document.write (
+			// 	'<p>', '<b>', teacher1[0], '</b>' + ' ' + '<b>', teacher1[1], '</b>' + ' ' + '<b>', teacher1[2], '</b>', '</p>' +
+			// 	'<p>', '<i>Должность:</i>' + ' ' + teacher1[3], '</p>' +
+			// 	'<p>', '<i>Уровень образования:</i>' + ' ' + teacher1[4], '</p>' +
+			// 	'<p>', '<i>Категория:</i>' + ' ' + teacher1[5], '</p>' +
+			// 	'<p>', '<i>Образование:</i>' + ' ' + teacher1[6], '</p>' +
+			// 	'<p>', '<i>Дисциплины:</i>' + ' ' + teacher1[7] + teacher1[8] + teacher1[9] , '</p>' +
+			// 	'<p>', '<i>Примечание:</i>' + ' ' + teacher1[10], '</p>'
+			// );
+
+	//Задание 1-10
+			// document.write (
+			// 	'<p>', '<b>', teacher.surname, '</b>' + ' ' + '<b>', teacher.name, '</b>' + ' ' + '<b>', teacher.patronymic, '</b>', '</p>' +
+			// 	'<p>', '<i>Должность:</i>' + ' ' + teacher.ocupation, '</p>' +
+			// 	'<p>', '<i>Уровень образования:</i>' + ' ' + teacher.degree, '</p>' +
+			// 	'<p>', '<i>Категория:</i>' + ' ' + teacher.category, '</p>' +
+			// 	'<p>', '<i>Образование:</i>' + ' ' + teacher.education, '</p>' +
+			// 	'<p>', '<i>Дисциплина:</i>' + ' ' + teacher.discipline, '</p>' +
+			// 	'<p>', '<i>Примечание:</i>' + ' ' + teacher.note, '</p>'
+			// ); 
+	//Задание 1-11,1=12
+			let line = `
+			<h2> ${teacher.surname} ${teacher.name} ${teacher.patronymic} </h2> 
+			<p> <i> Должность:</i> ${teacher.ocupation} </p> 
+			<p> <i> Уровень образования:</i> ${teacher.degree} </p> 
+			<p> <i>Категория:</i> ${teacher.category} </p> 
+			<p> <i>Образование:</i> ${teacher.education[0]} ${teacher.education[1]}</p> 
+			<p> <ul><i>Дисциплины:</i></ul> <li>${teacher.discipline[0]}</li> <li>${teacher.discipline[1]}</li> <li>${teacher.discipline[2]}</li></p> 
+			<p> <i>Примечание:</i> ${teacher.note} </p>`;
+			document.write(line);
+		</script>
+	</div>
+	
+	<footer align = "center">
+		<h3>Добро пожаловать на pechora_PROger</h3>
+		<a href="https://vk.com/pechora_proger" target="__blank">pechora_PROger</a>
+	</footer>
+
+</body>
+</html>
